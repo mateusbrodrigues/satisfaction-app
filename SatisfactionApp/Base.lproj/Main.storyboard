@@ -18,6 +18,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksB-eN-kva">
                                 <rect key="frame" x="125" y="419.33333333333331" width="152" height="35.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35.329999999999998" id="IZU-0d-9a8"/>
+                                </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Iniciar" cornerStyle="medium">
@@ -54,7 +57,6 @@
                             <constraint firstItem="7w4-uv-Ov7" firstAttribute="leading" secondItem="zmS-zp-tgO" secondAttribute="leading" constant="115" id="RNg-LB-yDg"/>
                             <constraint firstItem="7w4-uv-Ov7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-22" id="dIz-su-NOK"/>
                             <constraint firstItem="ksB-eN-kva" firstAttribute="centerX" secondItem="zmS-zp-tgO" secondAttribute="centerX" id="f4a-Av-4Ih"/>
-                            <constraint firstItem="zmS-zp-tgO" firstAttribute="bottom" secondItem="ksB-eN-kva" secondAttribute="bottom" constant="385.33333333333331" id="gOB-Rk-3CM"/>
                             <constraint firstItem="7w4-uv-Ov7" firstAttribute="centerX" secondItem="zmS-zp-tgO" secondAttribute="centerX" id="iGM-E1-bAN"/>
                             <constraint firstItem="boZ-Mw-9CI" firstAttribute="top" secondItem="7w4-uv-Ov7" secondAttribute="bottom" constant="8" id="pdg-j1-KV6"/>
                         </constraints>
@@ -161,11 +163,48 @@
                         <outletCollection property="BotoesResposta" destination="OP3-sk-hdA" collectionClass="NSMutableArray" id="S6P-lb-R2y"/>
                         <outletCollection property="BotoesResposta" destination="TcD-xi-72P" collectionClass="NSMutableArray" id="jtl-lF-Il7"/>
                         <outletCollection property="BotoesResposta" destination="f9d-Fy-xZ2" collectionClass="NSMutableArray" id="4L7-yb-Vvn"/>
+                        <segue destination="Bo2-Dj-CoZ" kind="show" identifier="irParaTelaResultado" id="RZN-WV-F9h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bct-s6-6Lt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1666" y="5"/>
+        </scene>
+        <!--Resultado-->
+        <scene sceneID="jhk-dS-Mto">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JSH-dY-T8q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="Bo2-Dj-CoZ" customClass="Resultado" customModule="SatisfactionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LfE-Xr-fhD">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feedback" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWY-7g-fj9">
+                                <rect key="frame" x="40" y="394" width="40" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="VdD-BT-EsK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3lQ-cA-6nh"/>
+                        <color key="backgroundColor" red="0.94117647410000005" green="0.81176471709999998" blue="0.74509805439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="3lQ-cA-6nh" firstAttribute="trailing" secondItem="LWY-7g-fj9" secondAttribute="trailing" constant="40" id="2sH-Yp-VN7"/>
+                            <constraint firstItem="LWY-7g-fj9" firstAttribute="centerX" secondItem="LfE-Xr-fhD" secondAttribute="centerX" id="LXS-ZM-WiR"/>
+                            <constraint firstItem="LWY-7g-fj9" firstAttribute="centerY" secondItem="LfE-Xr-fhD" secondAttribute="centerY" id="rLy-Se-WFT"/>
+                            <constraint firstItem="LWY-7g-fj9" firstAttribute="leading" secondItem="3lQ-cA-6nh" secondAttribute="leading" constant="40" id="smN-cB-doE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ALj-HQ-97Y"/>
+                    <connections>
+                        <outlet property="pontuacaoOutlet" destination="LWY-7g-fj9" id="bPK-Wy-ES0"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2409" y="5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yco-8y-F5f">
