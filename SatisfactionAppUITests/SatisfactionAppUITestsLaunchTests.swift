@@ -1,13 +1,13 @@
 //
-//  FirstAppUITestsLaunchTests.swift
-//  FirstAppUITests
+//  SatisfactionAppUITestsLaunchTests.swift
+//  SatisfactionAppUITests
 //
 //  Created by user264011 on 10/26/24.
 //
 
 import XCTest
 
-final class FirstAppUITestsLaunchTests: XCTestCase {
+final class SatisfactionAppUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

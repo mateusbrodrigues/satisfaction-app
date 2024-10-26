@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  FirstApp
+//  SatisfactionApp
 //
 //  Created by user264011 on 10/26/24.
 //
