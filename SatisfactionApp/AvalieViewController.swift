@@ -8,14 +8,23 @@
 import UIKit
 
 class AvalieViewController: UIViewController {
-
+    @IBOutlet weak var textoPergunta: UILabel!
+    
+    @IBOutlet var BotoesResposta: [UIButton]!
+    @IBAction func cliqueResposta(_ sender: UIButton) {
+        print(sender.tag)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configurarLayout()
         // Do any additional setup after loading the view.
     }
     
-
+    func configurarLayout(){
+        for botao in BotoesResposta{
+            //botao.tintColor = .black
+        }
+    }
     /*
     // MARK: - Navigation
 
